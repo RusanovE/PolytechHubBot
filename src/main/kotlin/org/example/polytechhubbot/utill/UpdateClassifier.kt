@@ -14,7 +14,7 @@ object UpdateClassifier {
                 when (message.text) {
                     "/start", "/start@op_hub_bot" -> UpdateType.START_COMMAND
                     "/help", "/help@op_hub_bot" -> UpdateType.HELP_COMMAND
-                    "/checkChannelStatus", "/checkChannelStatus@op_hub_bot" -> UpdateType.CHECK_CHANNEL_STATUS_COMMAND
+                    "/check_status", "/check_status@op_hub_bot" -> UpdateType.CHECK_CHANNEL_STATUS_COMMAND
                     "/how_to_communicate", "/how_to_communicate@op_hub_bot" ->  UpdateType.HOW_TO_COMMUNICATE_COMMAND
                     "/approve", "/approve@op_hub_bot" -> UpdateType.APPROVE_COMMAND
                     "/disapprove", "/disapprove@op_hub_bot" -> UpdateType.DISAPPROVE_COMMAND
