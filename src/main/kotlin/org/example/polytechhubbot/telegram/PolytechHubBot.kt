@@ -54,6 +54,23 @@ class PolytechHubBot(val botProperties: BotProperties, val updateDispatcher: Upd
             }
         }
     }
+
+   private final fun setBotCommands() {
+        val listOfBotCommands = listOf(
+            BotCommand("/start", "Start communication"),
+            BotCommand("/help", "Show commands"),
+            BotCommand("/check_status", "Check connection"),
+            BotCommand("/how_to_communicate", "How to talk to admins"))
+        try {
+            execute(SetMyCommands(listOfBotCommands, BotCommandScopeDefault(), null))
+        } catch (e: TelegramApiException) {
+            log.error("error with list of command" + e.message)
+        }
+    }
+
+    init {
+        setBotCommands()
+    }
 }
 
 
